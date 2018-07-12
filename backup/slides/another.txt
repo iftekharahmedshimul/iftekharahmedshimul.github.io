@@ -1,0 +1,21 @@
+<?php session_start();  ?>
+    <HTML>
+    <HEAD>
+    <TITLE>My first PHP script</TITLE>
+    </HEAD>
+    <BODY>
+       <?php
+         echo "Here is a session var<br>";
+         echo $_SESSION['test'];
+			
+	     if(isset($_SESSION['test'])) { ?>
+		     <img src="osu_logo.gif"> 
+	     <?php }
+             else {
+		   ?> <b> There is not image to display </b> <br> <?php
+             }
+           session_destroy();
+?>
+		
+</BODY>
+</HTML>

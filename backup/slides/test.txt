@@ -1,0 +1,92 @@
+<?php session_start();   ?>
+	<HTML>
+    <HEAD>
+    <TITLE>My first PHP script</TITLE>
+    </HEAD>
+    <BODY>
+
+    <?php
+
+    $submit=$_POST['submit'];
+    /* the above "<?php" signals that the PHP script has begun */
+	$today = date("Y-m-d");
+    PRINT "<CENTER>Today is: $today.</CENTER>";
+
+    echo <<<EOD
+          Example of string<br>
+          spanning multiple lines
+          using nowdoc syntax.  
+EOD;
+	
+    if($submit=="Find Faculty") {
+
+        $courses=$_POST['courses'];
+
+        if($courses[0]==null) {
+           echo "You didn't select a class";
+        }
+        else {
+            $sql = "SELECT fname FROM `Faculty` as f,`Class` as c WHERE f.fid=c.fid and (";
+            $sql=$sql."c.name='".$courses[0]."'";
+            for($i=1;$i<sizeof($courses); $i++)
+                $sql = $sql." or c.name='".$courses[$i]."'"; 
+            $sql=$sql.")";
+            echo $sql;
+            connect_to_database($mysql_handle);
+            $result=mysql_query($sql,$mysql_handle);
+            while($row=mysql_fetch_array($result))
+                echo $row['fname']."<br>";
+            mysql_close($mysql_handle);
+
+			echo "<form action=\"another.php\" method=\"post\">";
+			echo "<input type=\"submit\" name=\"submit\" value=\"Test Session\">";
+			echo "</form>";
+        }
+    }
+    elseif($submit=="Insert Address") {
+         $addr=$_POST['addr'];
+         echo $addr."<br>";
+         connect_to_database($mysql_handle);
+         $sql="insert into PlacesLived set address='".$addr."'";
+         echo $sql."<br>";
+         //$result=mysql_query($sql,$mysql_handle);
+
+         
+         $clean=mysql_real_escape_string($addr, $mysql_handle);
+         echo $clean."<br>";
+         $sql="insert into PlacesLived set address='".$clean."'";
+         $result=mysql_query($sql,$mysql_handle);
+    }
+    else {
+	$_SESSION['test']=100;
+	echo $_SESSION['test'];
+		
+        connect_to_database($mysql_handle);
+        $sql = 'SELECT name FROM `Class`';
+        $result=mysql_query($sql,$mysql_handle);
+        $num_results=mysql_num_rows($result);
+        echo "<form action=\"test.php\" method=\"post\">";
+        echo "<select multiple=\"multiple\" size=".$num_results." name=\"courses[]\">";
+        while($row=mysql_fetch_array($result))
+          echo "<option value=\"".$row['name']."\">".$row['name']."</option>";
+        echo "</select> <p>";
+        echo "<input type=\"submit\" name=\"submit\" value=\"Find Faculty\">";
+        mysql_close($mysql_handle);
+        echo "<p> <p> <input type=\"text\" name=\"addr\"> <p>";
+        echo "<input type=\"submit\" name=\"submit\" value=\"Insert Address\">";
+    }
+    function connect_to_database(&$mysql_handle) {
+        $dbhost = 'oniddb.cws.oregonstate.edu';
+        $dbname = 'parhammj-db';
+        $dbuser = 'parhammj-db';
+        $dbpass = '';
+        $mysql_handle = mysql_connect($dbhost, $dbuser, $dbpass)
+            or die("Error connecting to database server");
+        mysql_select_db($dbname, $mysql_handle)
+            or die("Error selecting database: $dbname");
+        echo 'Successfully connected to database!';
+    }
+    ?>
+    
+    </BODY>
+    </HTML>

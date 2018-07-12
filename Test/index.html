@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<head><style>
+body{margin:0px;}
+.h,.v{stroke:black;stroke-dasharray:4 4;stroke-width:1;stroke-opacity:.5;}
+.axis path,
+.axis line {
+    fill: none;
+    stroke: black;
+    shape-rendering: crispEdges;
+}
+
+.axis text {
+    font-family: sans-serif;
+    font-size: 11px;
+}
+</style></head>
+<body>
+
+<script src="d3.v3/d3.v3.min.js"></script>
+
+<script>
+ var svgContainer = d3.select("body").append("svg")
+                                    .attr("width", 200)
+                                  .attr("height", 200);
+ 
+ //Draw the Circle
+ var circle = svgContainer.append("rect")
+ .attr("width",50) 
+ .attr("height",50)
+ .attr("fill","green");
+                         
+
+</script>
+
+
+</body>
+</html>

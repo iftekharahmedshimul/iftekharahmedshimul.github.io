@@ -1,0 +1,36 @@
+body
+{
+    font: 10pt Helvetica;
+}
+
+th
+{
+    font: bold 10pt Helvetica;
+    background-color: #DDC;
+}
+
+td
+{
+    font: 10pt Helvetica;
+}
+
+td.week
+{
+    text-align: center;
+    background-color: #EED;
+}
+
+td.head
+{
+    background-color: #FFE;
+    font-weight: bold;
+    color: #001;
+}
+
+strong
+{
+    color: red;
+    font: italic bold 10pt Helvetica;
+    text-decoration: underline;
+}
+    

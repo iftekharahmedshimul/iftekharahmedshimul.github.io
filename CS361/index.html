@@ -1,0 +1,315 @@
+<html>
+    <head>
+        <title>CS 361: Software Engineering I, Summer 2013</title>
+        <link rel="stylesheet" type="text/css" href="style.css"/>
+    </head>
+    <body>
+        <h1>CS 361: Software Engineering I</h1>
+        <h2>Overview</h2>
+        <p>Our world is full of problems such as war, poverty, addiction, and pollution. Software has played and will continue to play a vital role in promoting peace, education, health, and the renewal of our planet.
+        </p>
+
+        <p>But software doesn't just grow on trees. Somebody has to carefully design and create the software in a way that actually addresses the problem without making it worse, without incurring excessive costs, and without creating troublesome new problems. That's called "engineering".
+        </p>
+
+        <p>Tackling big problems requires dreaming big and planning big. Dr. Scaffidi likes to quote what Grady Booch says about this:
+        </p>
+
+        <blockquote>If you want to build a dog house, you can pretty much start with a pile of lumber, some nails, and a few basic tools, such as a hammer, saw, and tape measure. In a few hours, with little prior planning, you'll likely end up with a dog house that's reasonably functional...
+If you want to build a high-rise office building, it would be infinitely stupid for you to start with a pile of lumber, some nails, and a few basic tools. Because you are probably using other people's money, they will demand to have input into the size, shape, and style of the building.... You will want to do extensive planning, because the cost of failure is high. You will be just a part of a much larger group responsible for developing and deploying the building, and so the team will need all sorts of blueprints and models to communicate with one another....
+        </blockquote>
+
+        <p>Building doghouse-sized software isn't going to make a meaningful impact on the big problems of our day. This course will give you the skills needed to analyze big problems, discover the requirements for a solution, design a solution, and manage the solution's implementation.
+        </p>
+
+        <p>Do you want to build doghouses? Or do you want to change the world? 
+        </p>
+        
+        <h2>General Information</h2>
+        <ul>
+            <li>Prerequisite: CS261</li>
+            <li>Lectures: M,W,F 1100-1150, COVL 218</li>
+            <li>Optional Textbook: <a href="http://www.amazon.com/Software-Engineering-Theory-Practice-4th/dp/0136061699/">Software Engineering - Theory and Practice, 4th Edition by Pfleeger & Atlee</a></li>
+            <li>Instructor: Iftekhar Ahmed, <a href="mailto:ahmed@eecs.oregonstate.edu">ahmed@eecs.oregonstate.edu</a></li>
+            <li>Office Hours: Wednesdays after class in the Kelley Atrium</li>
+            <li>Class mailing list: cs361-001-su13@engr.oregonstate.edu</li>
+        </ul>
+        
+<h2>Tentative Schedule</h2>
+        <p>This schedule is subject to change</p>
+        <table>
+            <tr>
+                <th>Date</th>
+                <th>Topic</th>
+                <th>Reading Assignments (Optional)</th>
+                <th>Assignments due at the end of the day</th>
+            </tr>
+            <tr>
+                <td colspan="4" class="week">Week 1</td>
+            </tr>
+            <tr>
+                <td colspan="4" class="head">Part 1: Overview</td>
+            </tr>
+            <tr>
+              <td>Monday, June 24th, 2013</td>
+              <td>Syllabus/<a href="lecture1-overview.ppt">Overview</a></td>
+              <td>Sidebar 1.1 (pg 6), Sections 1.3, 1.5-1.8</td>
+              <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>Wednesday, June 26th, 2013</td>
+                <td><a href="lecture2-process.ppt">Process</a></td>
+                <td>Section 2.2, Sidebars 2.1, 2.2 and 2.3</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>Friday, June 28th, 2013</td>
+                <td><a href="lecture3-requirements.ppt">Requirements</a><a href="lecture2-process.ppt"></a></td>
+                <td>Sections 4.1-4.4</td>
+                <td><a href="hw0.html">HW 0 (Individual): Your Vision Statement</a>; </td>
+				<td><a href="HW0submissions.zip">HW0 Vision Statements Submission compilation</a>; </td>
+            </tr>
+            <tr>
+              <td colspan="4" class="week">Week 2</td>
+            </tr>
+            <tr>
+                <td colspan="4" class="head">Part 2: Waterfall and Prototyping</td>
+            </tr>
+            <tr>
+                <td>Monday, July 1st, 2013</td>
+                <td><a href="lecture4-notations.ppt">Diagram Notations</a><a href="lecture3-requirements.ppt"></a></td>
+                <td>Sections 4.5-4.6</td>
+                <td>Vote for vision statements before class.</td>
+				<td><a href="Groups.xlsx">Groups</a></td>
+            </tr>
+            <tr>
+                <td>Wednesday, July 3rd, 2013</td>
+                <td><a href="lecture5-notations2.pptx">Diagram Notations (cont'd)</a><a href="lecture4-notations.ppt"></a></td>
+            </tr>
+            <tr>
+                <td>Friday, July 5th, 2013</td>
+                <td><a href="lecture6-prototyping.ppt">Paper Prototyping</a><a href="lecture5-notations2.pptx"></a><a href="lecture5-notations2.pptx"></a></td>
+                <td><a href="http://www.snyderconsulting.net/us-paper.pdf">Overview of paper prototyping</a> and <a href="http://www.uie.com/articles/prototyping_risk/">Discussion about risk</a></td>
+                
+            </tr>
+            <tr>
+                <td colspan="4" class="week">Week 3</td>
+            </tr>
+            <tr>
+                <td>Monday, July 8th, 2013</td>
+                <td><a href="lecture7-evalreqs.ppt">Evaluating Requirements</a><a href="lecture6-prototyping.ppt"></a></td>
+                <td>Sections 4.7-4.10</td>
+                <td><a href="hw1.html">HW 1 (team): Requirements</a></td>
+            </tr>
+            <tr>
+                <td>Wednesday, July 10th, 2013</td>
+                <td><a href="lecture8-architecture.ppt">Architecture</a></td>
+                <td>Sections 5.1, 5.4-5.5, 5.7</td>
+            </tr>
+            <tr>
+                <td>Friday, July 12th, 2013</td>
+                <td><a href="lecture9-evalarch.ppt">Evaluating Architecture</a></td>
+                <td>Sections 5.3, 5.9-5.10</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td colspan="4" class="week">Week 4</td>
+            </tr>
+            <tr>
+                <td>Monday, July 15th, 2013</td>
+                <td><a href="lecture10-oodesign.ppt">Object Oriented Design</a></td>
+                <td>Sections 6.2-6.4, 6.8</td>
+                <td><a href="hw2.html">HW 2 (team): Evaluating Requirements</a></td>
+            </tr>
+            <tr>
+                <td>Wednesday, July 17th, 2013</td>
+                <td><a href="lecture11-oodesign2.ppt">Object-Oriented Design (cont'd)</a><a href="lecture9-evalarch.ppt"></a></td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>Friday, July 19th, 2013</td>
+                <td><a href="lecture12-designpatterns.ppt">Design Patterns</a></td>
+                <td>Sections 6.5-6.6</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td colspan="4" class="week">Week 5</td>
+            </tr>
+            <tr>
+                <td>Monday, July 22nd, 2013</td>
+                <td><a href="lecture13-designpatterns2ber.ppt">Design Patterns (cont'd)</a><a href="lecture11-oodesign2.ppt"></a></td>
+                <td>&nbsp;</td>
+                <td><a href="hw3.html">HW 3 (team): Architecture</a></td>
+            </tr>
+            <tr>
+                <td>Wednesday, July 24th, 2013</td>
+                <td><a href="lecture14-schedulecost.ppt">Schedule and Effort</a><a href="lecture13-designpatterns2ber
+                .ppt"></a></td>
+                <td>Sections 3.1-3.4, 3.7</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>Friday, July 26th, 2013</td>
+                <td>Workshop Day</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td colspan="4" class="week">Week 6</td>
+            </tr>
+            <tr>
+                <td colspan="4" class="head">Part 3: Extreme Programming/Agile</td>
+            </tr>
+            <tr>
+                <td>Monday, July 29th, 2013</td>
+                <td><a href="lecture15-agileoverview.ppt">Agile</a></td>
+                <td>Sections 2.1-2.2, Sidebar 4.2 (p. 145), <a href="http://agilemanifesto.org">Entire Agile Manifesto website</a></td>
+                <td><a href="hw4.html">HW 4 (team): Implementation Design</a><br>Second Vision Statement is due.</td>
+				<td><a href="VisionStatements2.zip">Vision Statements 2 Submission compilation</a>; </td>
+            </tr>
+            <tr>
+                <td>Wednesday, July 31st, 2013</td>
+                <td><a href="lecture16-customercollab.ppt">Customer Collaboration</a></td>
+                <td><a href="http://www.agile-process.org">Agile Process Website</a></td>
+                <td><a href="Groups.xlsx">Groups</a></td>
+            </tr>
+            <tr>
+                <td>Thursday, August 1st, 2013</td>
+                <td>Midterm</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>Friday, August 2nd, 2013</td>
+                <td><a href="lecture17-pairprogramming.pptx">Pair Programming</a></td>
+                <td><a href="http://www.extremeprogramming.org">XP website</a></td>
+                <td><p>Take-home midterm is due AT THE BEGINNING OF CLASS</p>
+                <p><a href="http://www.itasoftware.com/careers/work-at-ita/PuzzleFiles/movies3.txt">Movie List</a></p></td>
+            </tr>
+            <tr>
+                <td colspan="4" class="week">Week 7</td>
+            </tr>
+            <tr>
+                <td>Monday, August 5th, 2013</td>
+                <td><a href="lecture18-testing.ppt">Testing</a><a href="lecture17-pairprogramming.pptx"></a></td>
+                <td><a href="http://www.extremeprogramming.org">Sections 8.1-8.3</a></td>
+                <td><a href="hw5.html">HW5 (team): User Stories and Set-up</a><a href="http://www.itasoftware.com/careers/work-at-ita/PuzzleFiles/movies3.txt"></a></td>
+            </tr>
+            <tr>
+                <td>Tuesday, August 6th, 2013</td>
+                <td><a href="lecture19-indivinter.ppt">Individuals and Interactions</a></td>
+                <td>Sidebar 5.1 (p. 230), <a href="http://xprogramming.com/xpmag/Misconceptions">Misconceptions about XP</a></td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>Wednesday, August 7th, 2013</td>
+                <td><a href="lecture21-contimpr.ppt">Continuous Improvement</a></td>
+                <td>&nbsp;</td>
+				<td>&nbsp;</td>
+            </tr>
+			 <tr>
+                <td>Thursday, August 8th, 2013</td>
+                <td><a href="lecture22-professionalism.ppt">Professionalism</a></td>
+                <td><a href="http://consuleng.com.au/Professionalism%20(Lloyd%20-%201973.pdf">Engineering Professionalism</a> and <a href="http://www.acm.org/about/se-code">ACM/IEEE Code of Ethics</a></td>
+                <td>&nbsp;</td>
+            </tr>
+			  <tr>
+                <td>Friday, August 9th, 2013</td>
+				<td>Workshop Day</td>
+                <td><a href="http://simpletest.org">Simpletest web site</a></td>
+                <td>&nbsp;</td>
+            </tr>
+		   <tr>
+                <td>Saturday, August 10th, 2013</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td><a href="hw6.html">HW 6 (team): First Implementation</a></td>
+            </tr>
+		   
+		   <tr>
+                <td colspan="4" class="week">Week 8</td>
+            </tr> 
+		   <tr>
+                <td>Monday, August 12th, 2013</td>
+                <td>Team Presentations</td>
+				<td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>Tuesday, August 13th, 2013</td>
+                <td>Team Presentations</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>Wednesday, August 14th, 2013</td>
+                <td>Team Presentations</td>
+                <td>&nbsp;</td>
+			</tr>
+            <tr>
+                <td>Thursday, August 15th, 2013</td>
+                <td>Final Exam</td>
+                <td>&nbsp;</td>
+                <td><a href="hw7.html">HW 7 (team): Second Implementation</a></td>
+            </tr>
+            <tr>
+                <td>Friday, August 16th, 2013</td>
+                <td>Demo( KEC atrium)</td>
+                <td>Group 1 at 10:00 AM </td> 
+				<td>Group 2 at 10:30 AM</td>
+				<td>Group 3 at 11:00 AM</td>
+				<td>Group 4 at 11:30 AM</td>
+                <td>&nbsp;</td>
+            </tr>
+        </table>   
+        
+<h2>Teamwork and Vision Statements</h2>         
+        
+        <p><a href="vision">HW 0 Vision Statements</a> (Access information was sent via the class mailing list)
+        </p>
+        
+        <p>You will mostly work in teams of 3-5 students. Each team will design and/or implement a software system based on ideas that you provide.
+        </p>
+
+        <p>Here's how it will work:</p>
+        <ol>
+        <li>In the first week of class, each student will submit a Vision Statement. This statement will describe a software system that you believe will help to make the world a better place.</li>
+        <li>All students will vote on what vision statements they find most compelling.</li>
+        <li>I will pick the top few Vision Statements, based on popularity. The authors of the top Vision Statements will receive extra credit for the course and will serve as "customers" for the systems that they envisioned. This is separate from the grading of the Vision Statement, which is described <a href="hw0.html">here</a>.</li>
+        <li>I will assign you to teams based on which of the top Vision Statements you are interested in. Note that I cannot promise that I will assign you to your favorite choice, since I need to keep the teams fairly equally-sized.</li>
+        <li>For homeworks 1 through 4, each team will design a system based on their assigned Vision Statement (and input from the vision's customer). These will be graded as described below.</li>
+        <li>Then we break up the teams and start over again in new teams on a second project.</li>
+        <li>At the midpoint of the course, each student will submit an updated Vision Statement. This will give you a chance to improve it or rewrite it completely, based on your classmates' feedback.</li>
+        <li>Students will vote again, and new teams will be formed based on the top few updated Vision Statements. Extra credit will again be given.</li>
+        <li>For homeworks 5 through 7, each team will design and implement a system based on their assigned Vision Statement and customer input. You will also present your system on the final week of class.</li>
+        </ol>
+        
+        <p>Be forewarned that every single homework will require a <strong>lot of work</strong>. Do not wait until the night before to start the homework; you will be dismayed. Start on each homework the week before it is due, and <strong>spread the work throughout the week</strong>. Also spread out the work over the entire team. There is so much work that it would be hard for a single person to do it all.
+        </p>
+
+        <p>As noted above, every student must make a contribution to every homework. When your team submits each homework, you must indicate what each team member contributed. Individual team members will usually get approximately the same grade on each team homework, but individual team member grades may be reduced depending on the quality and quantity of their contribution.
+        </p>
+
+        <p>In extreme cases, a team can decide to fire a member for cause on or before the day that the team's first homework is due (ie: HW1 or HW5). To do this, the team members must first attempt to discuss potential firing with the teammate, and then contact me and make their case for why the teammate should be fired. Fired team members may join together (if there are others who are willing to join you), or may continue the course as a one-person team. Since being a one-person team would mean a lot of work, it would be sensible to avoid getting fired.
+        </p>
+
+        <h2>Grading</h2>
+        <p>Grading weights: 25% for final exam, 25% for midterm exam, 6% for each of 7 homeworks, 8% for vision statement
+        </p>
+
+        <p>Students must work alone on the final exam, the midterm exam and the vision statement. Students must work together as a team on all other homeworks; every student must make a contribution to every team homework. When your team submits each homework, you must honestly and accurately indicate what each team member contributed to the homework. The rules regarding Academic Dishonesty will be strictly enforced. Note that the penalties are quite severe and that the instructor has no discretion once a case of cheating is detected. Please see the <a href="http://oregonstate.edu/admin/stucon/achon.htm">OSU web-page</a> for more details.
+        </p>
+
+        <p>Exams will be printed on paper and must be turned in on paper. Vision statements will be turned in through a special website.
+        </p>
+        
+        <p>In contrast, all team homeworks must be submitted through email as PDF files. To produce PDF files, you can create your documents with Google Docs (which lets you convert docs to PDF). Microsoft Word also has a save to PDF option.  If you aren't using Microsoft Word, on Windows, you can install the free PDF995 software, which creates a virtual "printer" that saves printouts from any editor as PDF files. (Using PDF995 requires you to download and install two files, the Pdf995 Printer Driver and the Free Converter.) If you have a Mac, there is a print to PDF option. A final option if you have very legible handwriting is to do all your work on paper, then scan the paper into PDF using an image scanner (or if you have exceptionally big and clear handwriting, take a photograph and convert the photo to PDF).
+        </p>
+
+        <h2>Students with Disabilities</h2>
+        <p>Accommodations are collaborative efforts between students, faculty and Services for <a href="http://ds.oregonstate.edu/">Disability Access Service (DAS)</a>. Students with disabilities approved through DAS are responsible for contacting the faculty member in charge of the course prior to or during the first week of the term to discuss accommodations. Students who believe they are eligible for accommodations but who have not yet obtained approval through DAS should contact DAS immediately at 541-737-4098.
+        </p>
+        <p><strong>Most of this course was adapted from teaching material designed by Dr. Chris Scaffidi and Mr. David Piorkowski.</strong></p>
+        <p>Last Updated: June 23, 2013</p>
+    </body>
+</html>
